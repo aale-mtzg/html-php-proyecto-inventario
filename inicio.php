@@ -46,9 +46,9 @@
             <div id="content" class="container tarjeta"> 
                 <div class="container">
                     <!---->
-                    <h1>Inicio</h1>
+                    <h1>Buscar</h1>
 
-                    <h3>Buscar Activo</h3>
+                    
                     <div class="row">
                         <div class="col-md-6">
                             <!--Imagen del activo-->
