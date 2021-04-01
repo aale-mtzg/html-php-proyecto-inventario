@@ -53,7 +53,7 @@
                     <!---->
                     <h1>Registro de Equipo</h1>
                     <div class="container-form">
-                        <form action="validarRegistroEquipo.php" method="POST" >
+                        <form action="validarRegistroEquipo.php" method="POST"></form>
                             <!--Informacion general-->
                             <div class="row">
                                 <div class="col-md-8">

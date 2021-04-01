@@ -48,93 +48,61 @@
                     <!---->
                     <h1>Buscar</h1>
 
-                    
                     <div class="row">
                         <div class="col-md-6">
-                            <!--Imagen del activo-->
-                            <div class="form-row">
-                                <div class="form-group col-12">
-                                    <label for="archivoImagen"></label>
-                                    <div class="previewImagen">
-                                        <span class="delPhoto notBlock"><i class="fas fa-times"></i></span>
-                                        <label for="archivoImagen"></label>
-                                        <div>
-                                            <div class="image-activo">
-                                                <img src="" alt="" id="img" class="oculto">
-                                            </div>
-                                            <div class="content" id="portada">
-                                                <div class="icon"><i class="fas fa-upload"></i></div>
-                                                <div class="text">Subir QR</div>
-                                            </div>
-                                        </div>
+                            <form class="">
+                                <div class="form-row">
+                                    <div class="form-group col-8">
+                                        <input type="text" class="form-control" id="" placeholder="Ingresar No. Serial...">
                                     </div>
-                                    <div class="upimg">
-                                        <input type="file" name="archivoImagen" id="archivoImagen">
-                                    </div>
-                                    <div id="form_alert"></div>
-                                </div>
-                            </div>
 
-                            <!--Imagen del activo-->
-                            <div class="form-row">
-                                <div class="form-group col-12">
-                                    <label for="archivoImagen"></label>
-                                    <div class="previewImagen">
-                                        <span class="delPhoto notBlock"><i class="fas fa-times"></i></span>
-                                        <label for="archivoImagen"></label>
-                                        <div>
-                                            <div class="image-activo">
-                                                <img src="" alt="" id="img" class="oculto">
-                                            </div>
-                                            <div class="content" id="portada">
-                                                <div class="icon"><i class="fas fa-camera"></i></div>
-                                                <div class="text">Escanear QR</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="upimg">
-                                        <input type="file" name="archivoImagen" id="archivoImagen">
-                                    </div>
-                                    <div id="form_alert"></div>
-                                </div>
-                            </div>
-
+                                    <div class="form-group col">
+                                        <button type="button" class="btn btn-info camara-archivo-btn">
                                             
-
-                            <!--QR-->
-                            <div class="form-row oculto">
-                                <div class="form-group ">
-                                    <!--<input id="archivoCodigoQR" type="file" class="form-control-file"  name="archivoCodigoQR" >-->
-                                    <div class="content-codigo-qr">
+                                            <div class="icon"><i class="fas fa-camera"></i></div>
+                                        </button>
+                                    </div>
+                                    <div class="form-group col">
+                                        <button type="button" class="btn btn-info camara-archivo-btn">
+                                            
+                                            <div class="icon"><i class="fas fa-upload"></i></div>
+                                        </button>
                                     </div>
                                 </div>
-                                <!--Auxiliar oculto para guadar QR base64-->
-                                <textarea class="form-control" id="archivoQR" name="archivoQR" rows="1"></textarea>
-                            </div> 
-                            <!--Codigo QR del activo (tamaño de la imagen)-->
-                            <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-row">
-                                            <!--Elegir tamaño de QR-->
-                                            <div class="form-group oculto" >
-                                                <div class="container">
-                                                    <form method="post" id="generador" action="">
-                                                        <div class="form-group">
-                                                            <label for="textqr">Tamaño</label>
-                                                            <select class='form-control' id='sizeqr'>
-                                                                <option value='100'>100 px</option>
-                                                                <option value='200'>200 px</option>
-                                                                <option value='300' selected>300 px</option>
-                                                                <option value='400'>400 px</option>
-                                                                <option value='500'>500 px</option>
-                                                            </select>
-                                                        </div>
-                                                    </form>
+                                
+                                <div class="form-row">
+                                    <!--Subir -->
+                                    <div class="form-group col-12">
+                                        <div class="previewImagen ">
+                                            <span class="delPhoto notBlock"><i class="fas fa-times"></i></span>
+                                            <label for="archivoImagen"></label>
+                                            <div>
+                                                <div class="image-activo">
+                                                    <img src="" alt="" id="img" class="oculto">
+                                                </div>
+                                                <div class="content" id="portada">
+                                                    <i class="fas fa-qrcode icon"></i>
+                                                    <div class="text">Código QR</div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="upimg">
+                                            <input type="file" name="archivoImagen" id="archivoImagen">
+                                        </div>
+                                        <div id="form_alert"></div>
                                     </div>
-                            </div>
+                                </div>
+                                <div class="form-row center">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-danger buscar-btn">
+                                            Buscar
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                            </form>
+
                         </div>
                     </div>
                 </div>
@@ -157,6 +125,57 @@
     </body>
 </html>
 
+
+
+<!--AGREGAR IMAGEN-->
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        //--------------------- SELECCIONAR FOTO ACTIVO ---------------------
+        $("#archivoImagen").on("change",function(){
+            var uploadFoto = document.getElementById("archivoImagen").value;
+            var foto       = document.getElementById("archivoImagen").files;
+            var nav = window.URL || window.webkitURL;
+            var contactAlert = document.getElementById('form_alert');
+            
+                if(uploadFoto !='')
+                {
+                    var type = foto[0].type;
+                    var name = foto[0].name;
+                    if(type != 'image/jpeg' && type != 'image/jpg' && type != 'image/png')
+                    {
+                        contactAlert.innerHTML = '<p class="errorArchivo">El archivo no es válido.</p>';                        
+                        $("#img").remove();
+                        $(".delPhoto").addClass('notBlock');
+                        
+                        $('#foto').val('');
+                        return false;
+                    }else{  
+                            contactAlert.innerHTML='';
+                            $("#img").remove();
+                            document.getElementById("portada").style.display = "none";
+                            $(".delPhoto").removeClass('notBlock');
+                            var objeto_url = nav.createObjectURL(this.files[0]);
+                            $(".previewImagen").append("<img id='img' src="+objeto_url+">");
+                            $(".upimg label").remove();
+                            
+                        }
+                }else{
+                    alert("No selecciono foto");
+                    $("#img").remove();
+                }              
+        });
+
+        $('.delPhoto').click(function(){
+            $('#foto').val('');
+            $(".delPhoto").addClass('notBlock');
+            document.getElementById("portada").style.display = "block";
+            $("#img").remove();
+
+        });
+
+    });
+</script>
 
 <!--FUNCIONAMIENTO PARA MENU NAVBAR-->
 <script>
