@@ -11,7 +11,7 @@
   background: red;
 }
 
-.tabla-activos {
+.tabla-activos thead {
   background: #081042;
   color: whitesmoke;
   text-align: center;
@@ -20,4 +20,10 @@
 
 .tabla-activos tbody{
   font-size: 14px;
+  background: whitesmoke;
+}
+
+.modal-btns-acciones{
+  text-align: right;
+  margin-top: 20px;
 }

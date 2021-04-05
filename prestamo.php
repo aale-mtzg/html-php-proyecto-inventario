@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <!--CSS-->
         <link href="css/general-navbar-sidebar-menu-styles.css" rel="stylesheet" type="text/css">
+        <link href="css/cambioUbicacion-styles.css" rel="stylesheet" type="text/css">
         <!--icons -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -132,7 +133,40 @@
                     </div>
                     <div class="modal-body">
                         <div class="container">
-                            ...
+                             <form>
+                                <div class="form-row ">
+                                    <div class="form-group col-md-2">
+                                        <label for="capacidad">Unidades</label>
+                                        <input type="number" class="form-control" id="unidades" name="unidades" value="1" min="1" required>    
+                                    </div> 
+                                </div>
+
+                                <div class="form-row ">
+                                    <div class="form-group col-12">
+                                        <label for="aMaterno">Nombre del departamento</label>
+                                        <input type="text" class="form-control" id="departamento" name="departamento" required >    
+                                    </div>  
+                                </div>
+                                <div class="form-row ">
+                                    <div class="form-group col-12">
+                                        <label for="fechaAlta">Fecha de prestamo</label>
+                                            <input type="date" class="form-control" id="fechaPrestamo" name="fechaPrestamo" value="<?php echo date("Y-m-d");?>">
+                                       </div>  
+                                </div>
+                                <div class="form-row ">
+                                    <div class="form-group col-12">
+                                        <label for="fechaDevolucion">Fecha de devolución</label>
+                                            <input type="date" class="form-control" id="fechaDevolucion" name="fechaDevolucion" value="<?php echo date("Y-m-d");?>">
+                                       </div>  
+                                </div>
+
+
+                                <div class="modal-btns-acciones">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <button type="submit" href="" value="" name="action" id="" class="btn btn-success">Aceptar</button>
+                                
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

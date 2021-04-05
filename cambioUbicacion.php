@@ -11,6 +11,12 @@
     $nombre = $_SESSION['nombreUsuario'];
     $tipo_usuario = $_SESSION['rol'];
 
+    $db = new Db();
+
+    $conexion = $db -> connect();
+    $select = "SELECT * FROM ubicaciones";
+    $ubicacion = $db-> Db_query($select);
+
 
     //echo '<pre>';
     //print_r($_POST);
@@ -75,6 +81,7 @@
                                 <div class="form-group mr-2">
                                     <input type="text" class="form-control" id="" name="lista[]" placeholder="Ingresar No. Serial...">
                                 </div>
+                                
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-danger buscar-btn" >
                                         Aceptar
@@ -145,7 +152,30 @@
                     </div>
                     <div class="modal-body">
                         <div class="container">
-                            ...
+                            <form>
+                                
+                                <div class="form-row">
+                                    <!--Informacion de ubicacion-->
+                                    <div class="form-group col-md-12">
+                                        <label for="tipoUbicacion">Ubicación</label> <!--Tipo/Nobre ubicacion-->
+                                        <select class="form-control" id="tipoUbicacion" name="tipoUbicacion" >
+                                            <?php // TODO ESTA LINEA DE CODIGO SOLO ES PARA TRAER LOS DATOS DE MIS TABLAS CON LA LLAVE FORANEA
+                                                $get_ubicaciones = "SELECT * FROM ubicaciones";
+                                                $consulta = $db -> Db_query($get_ubicaciones);
+                                                while($fila=$consulta->fetch_array()){ //recorre el arreglo
+                                                    echo "<option value ='".$fila['id_ubicacion']."'>".$fila['tipo_ubicacion']." ".$fila['nombre_ubicacion']."</option>"; //muestra los datos de la tabla externa
+                                                }
+                                            ?>
+                                        <option value="">No especificado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-btns-acciones">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <button type="submit" href="" value="" name="action" id="" class="btn btn-success">Aceptar</button>
+                                
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
