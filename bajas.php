@@ -27,8 +27,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <!--CSS-->
         <link href="css/general-navbar-sidebar-menu-styles.css" rel="stylesheet" type="text/css">
+        <link href="css/bajas-styles.css" rel="stylesheet" type="text/css">
         <!--icons -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <!--   Datatables-->
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>  
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>  
+        <!-- extension responsive y de bootstrap 4-->
+        <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap4.min.js"></script>
+        
+        <!--SweetAlert-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>   
 
         <title>Bajas</title>
     </head>
@@ -45,7 +56,142 @@
             <div id="content" class="container tarjeta"> 
                 <div class="container">
                     <!---->
-                    <h1>Baja de Activos</h1>
+                    
+                    <div class="row " >
+                        <div class="col-lg-12">
+                            <h1>Baja de Activos</h1>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3" id="btn-bajaActivo">
+                        <div class="col-lg-12">
+                            <button  type="button" class="btn btn-danger " onClick="mostrarSeleccionActivos()">
+                                Dar de baja activo
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!--Tabla-->
+                    <div class="row mb-3" id="tabla-bajas">
+                        <div class="col-lg-12">
+                            <table id="example" class="table table-striped table-bordered tabla-activos" >
+                                <thead class="">
+                                    <tr>
+                                       <!--<th scope="col">ID</th>-->
+                                        <th scope="col">ID de Baja</th>
+                                        <th scope="col">No. Serial</th>
+                                        <th>No. Serial Disp</th>
+                                        <th>No. Serial TecNM</th>
+                                        
+                                        <th>Tipo Activo</th>
+                                        
+                                        <th>Nombre</th>
+                                        <th scope="col">Fecha de Baja</th>
+
+                                        
+                                    </tr>
+                                </thead>
+
+                                <tbody> 
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div class="row" id="seleccionar-activo">
+                        <div class="col-lg-12">
+                            <h2>Seleccionar Activo</h2>
+                            <form class="" action="procesarMovimiento.php" method="POST">
+                                <div class="form-row">
+                                    <div class="form-group mr-2">
+                                        <input type="text" class="form-control" id="" name="lista[]" placeholder="Ingresar No. Serial...">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-danger buscar-btn" >
+                                            Aceptar
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!--Tabla de activos seleccionados-->
+                    <div class="row " id="tabla-activos">
+                        <div class="col-lg-12">
+                            <table id="example" class="table table-striped table-bordered tabla-activos" >
+                                <thead class="">
+                                    <tr>
+                                       <!--<th scope="col">ID</th>-->
+                                        <th scope="col">No. Serial</th>
+                                        <th scope="col">No. Serial Disp</th>
+                                        <th scope="col">No. TecNM</th>
+                                        <th scope="col">Tipo</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Esatus</th>
+                                        <th scope="col">Ubicacion Actual</th>
+                                    </tr>
+                                </thead>
+
+                                    
+                                <tbody> 
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--Boton registro de prestamo-->
+                            <button href="" type="button"  id="ver_modal" class="btn btn-outline-secondary " data-toggle="modal" data-target="#modal-confirmacion" onclick="">
+                                Baja de activos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--Eliminar Usuario-->       
+                    <div class="modal fade" id= "modal-confirmacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Baja de Activos</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="div">
+                                            ¿Esta seguro que desea dar de baja estos activos del inventario?
+                                        </div>
+                                        <div class="modal-btns-acciones">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                            <a id="btn-eliminar"  href="" class="btn btn-danger">Aceptar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -66,6 +212,15 @@
     </body>
 </html>
 
+
+<script type="text/javascript">
+    function mostrarSeleccionActivos(){
+        document.getElementById("seleccionar-activo").style.display = "block";
+        document.getElementById("tabla-activos").style.display = "block";
+        document.getElementById("btn-bajaActivo").style.display = "none";
+        document.getElementById("tabla-bajas").style.display = "none";
+    }
+</script>
 
 <!--FUNCIONAMIENTO PARA MENU NAVBAR-->
 <script>

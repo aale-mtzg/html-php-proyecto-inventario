@@ -315,7 +315,6 @@
         document.getElementById("tabla-activos").style.display = "block";
         document.getElementById("btn-nuevoPrestamo").style.display = "none";
         document.getElementById("tabla-prestamos").style.display = "none";
-
     }
 </script>
 
