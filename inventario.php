@@ -54,8 +54,9 @@ session_start();
 
             <!--Contenido principal-->
             <div id="content" class="container tarjeta">
-                <h1>Inventario</h1>   
+                 
                 <div class="container">
+                    <h1>Inventario</h1>  
                 <!--Tabla de activos registrados-->
                     <div class="row">
                         <div class="col-lg-12 ">
