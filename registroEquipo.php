@@ -227,7 +227,7 @@
                                     
 
                                     <!--QR-->
-                                    <div class="form-row oculto">
+                                    <div class="form-row ">
                                         <div class="form-group ">
                                             <!--<input id="archivoCodigoQR" type="file" class="form-control-file"  name="archivoCodigoQR" >-->
                                             <div class="content-codigo-qr">
@@ -238,7 +238,7 @@
                                     </div>
 
                                     <!--QR imagen jpg--> 
-                                    <div class="form-row oculto">
+                                    <div class="form-row ">
                                         <div class="form-group">
                                             <div class="content-codigo-qr-img">
                                                 <!---Desplegar imagen de QR-->
@@ -300,7 +300,7 @@
         </script>
 
         <!--SweetAlert
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>--:
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>-->
         
         <!--<script src="js/sweetAlert.js"></script>-->
 

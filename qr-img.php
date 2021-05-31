@@ -26,4 +26,10 @@ echo '<img name="archivoQR" id="archivoQR-img" src="data:image/png;base64,'.$ima
 //echo '<input id="archivoCodigoQR" type="file" class="form-control-file"  name="archivoCodigoQR src="data:image/png;base64,'.$imageData.'" >'; 
 
 
+/**** Es necesario descargar libreria de codigo QR 
+ * composer require endroid/qr-code
+ */
+
+
+
 ?>

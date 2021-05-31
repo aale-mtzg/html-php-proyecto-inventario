@@ -120,7 +120,7 @@
 
         <script src="script.js">
             /*Archivo js*/ 
-        </script>
+        </script> 
 
     </body>
 </html>
