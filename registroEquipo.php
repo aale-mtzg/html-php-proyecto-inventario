@@ -52,235 +52,337 @@
                 <div class="container">
                     <!---->
                     <h1>Registro de Equipo</h1>
-                    <div class="container-form">
+                    <div class="container-form ">
                         <form action="validarRegistroEquipo.php" method="POST"></form>
                             <!--Informacion general-->
                             <div class="row">
-                                <div class="col-md-8">
-                                    <!--Informacion general-->
-                                    <div class="form-row">
-                                        <div class="form-group col-md-4">
-                                            <label for="numSerial">Serial</label>
-                                            <input type="text" class="form-control " id="numSerial" aria-describedby="inputGroup-sizing-sm" readonly>
-                                            
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="numDispositivo">Serial del Dispositivo</label>
-                                            <input type="text" class="form-control" id="numDispositivo" name="numDispositivo">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="numTecNM">Serial TecNM</label>
-                                            <input type="text" class="form-control" id="numTecNM" name="numTecNM">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="nombreActivo">Nombre</label>
-                                            <input type="text" class="form-control" id="nombreActivo" name="nombreActivo" required>
-                                        </div>
-                                        
-                                        <div class="form-group col-md-4">
-                                            <label for="fechaAlta">Fecha de alta</label>
-                                            <input type="date" class="form-control" id="fechaAlta" name="fechaAlta" value="<?php echo date("Y-m-d");?>">
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="cantidad">Cantidad</label>
-                                            <input type="number" class="form-control" id="cantidad" name="cantidad" value="1" min="1">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            
-                                            <div class="form-group ">
-                                                <label for="marca">Marca</label>
-                                                <input type="text" class="form-control" id="marca" name="marca">
-                                            </div>
-                                            <div class="form-group ">
-                                                <label for="modelo">Modelo</label>
-                                                <input type="text" class="form-control" id="modelo" name="modelo">
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <div class="form-group ">
-                                                <label for="descripcionActivo">Descripción del Activo</label>
-                                                <textarea class="form-control" id="descripcionActivo" rows="5"></textarea>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="color">Color</label>
-                                            <input type="text" class="form-control" id="color" name="color">
-                                        </div>
-                                        <!--Informacion Equipo-->
-                                        <div class="form-group col-md-6">
-                                            <label for="capacidadMemoria">Memoria</label>
-                                            <input type="text" class="form-control" id="capacidadMemoria" name="capacidadMemoria">
-                                        </div>
-                                    </div>
-
-                                    <!--Informacion Equipo-->
-                                    <div class="form-row">
-                                        <div class="form-group col-md-4">
-                                            <label for="procesador">Procesador</label>
-                                            <input type="text" class="form-control" id="procesador" name="procesador">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="discoDuro">Disco Duro</label>
-                                            <input type="text" class="form-control" id="discoDuro" name="discoDuro">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="pulgadas">Pulgadas</label>
-                                            <input type="text" class="form-control" id="pulgadas" name="pulgadas">
-                                        </div>
-                                        
-                                    </div>        
-                                    <div class="form-row">
-                                        <div class="form-group col-md-4">
-                                            <label for="resolucion">Resolución</label>
-                                            <input type="text" class="form-control" id="resolucion" name="resolucion">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="conectividad">Conectividad</label>
-                                            <input type="text" class="form-control" id="conectividad" name="conectividad">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="tipoEntrada">Tipo de entrada</label>
-                                            <input type="text" class="form-control" id="tipoEntrada" name="tipoEntrada">
-                                        </div>
-
-                                    </div>
-                                </div> 
-
-                                <div class="col-md-4 ">
-                                    <!--Imagen del activo-->
-                                    <div class="form-row">
-                                        <div class="form-group col-12">
-                                            <label for="archivoImagen">Imagen</label>
-                                            <div class="previewImagen">
-                                                <span class="delPhoto notBlock"><i class="fas fa-times"></i></span>
-                                                <label for="archivoImagen"></label>
-                                                <div>
-                                                    <div class="image-activo">
-                                                        <img src="" alt="" id="img" class="oculto">
+                                <div class="col-md-8 ">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <!--Informacion general-->
+                                            <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="numSerial">Serial</label>
+                                                        <input type="text" class="form-control form-control-sm " id="numSerial" aria-describedby="inputGroup-sizing-sm" readonly>
                                                     </div>
-                                                    <div class="content" id="portada">
-                                                        <div class="icon"><i class="fas fa-camera"></i></div>
-                                                        <div class="text">Subir imagen</div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="tipoActivo">Tipo de activo</label>
+                                                        <input class="form-control form-control-sm" id="tipoActivo" type="text" value="Equipo" readonly>
+                                                    </div>
+                                                    <div class="form-group col-md-2">
+                                                        <label for="cantidad">Cantidad</label>
+                                                        <input type="number" class="form-control form-control-sm" id="cantidad" name="cantidad" value="1" min="1">
+                                                    </div>
+                                            </div>
+                                            <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="numDispositivo">Serial del Dispositivo</label>
+                                                        <input type="text" class="form-control form-control-sm" id="numDispositivo" name="numDispositivo">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="numTecNM">Serial TecNM</label>
+                                                        <input type="text" class="form-control form-control-sm" id="numTecNM" name="numTecNM">
+                                                    </div>
+                                            </div>
+                                            
+                                            <div class="form-row">
+                                                    <!--Informacion de ubicacion-->
+                                                    <div class="form-group col-md-4">
+                                                        <label for="tipoUbicacion">Ubicación</label> <!--Tipo/Nobre ubicacion-->
+                                                        <select class="form-control form-control-sm" id="tipoUbicacion" name="tipoUbicacion" >
+                                                        <?php // TODO ESTA LINEA DE CODIGO SOLO ES PARA TRAER LOS DATOS DE MIS TABLAS CON LA LLAVE FORANEA
+                                                            $get_ubicaciones = "SELECT * FROM ubicaciones";
+                                                            $consulta = $db -> Db_query($get_ubicaciones);
+                                                            while($fila=$consulta->fetch_array()){ //recorre el arreglo
+                                                                echo "<option value ='".$fila['id_ubicacion']."'>".$fila['tipo_ubicacion']." ".$fila['nombre_ubicacion']."</option>"; //muestra los datos de la tabla externa
+                                                            }
+                                                        ?>
+                                                        <option value="">No especificado</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="estatus">Estatus</label>
+                                                        <select class="form-control form-control-sm" id="estatus" name="estatus">
+                                                            <?php // TODO ESTA LINEA DE CODIGO SOLO ES PARA TRAER LOS DATOS DE MIS TABLAS CON LA LLAVE FORANEA
+                                                                $get_estatus= "SELECT * FROM estatus";
+                                                                $consulta = $db -> Db_query($get_estatus);
+                                                                while($fila=$consulta->fetch_array()){ //recorre el arreglo
+                                                                    echo "<option value ='".$fila['id_estatus']."'>".$fila['nombre_estatus']."</option>"; //muestra los datos de la tabla externa
+                                                                }
+                                                            ?>
+                                                            <option value="">No especificado</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="fechaAlta">Fecha de alta</label>
+                                                        <input type="date" class="form-control form-control-sm" id="fechaAlta" name="fechaAlta" value="<?php echo date("Y-m-d");?>">
+                                                    </div>
+                                            </div>
+                                    
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <label for="nombreActivo">Nombre</label>
+                                                    <input type="text" class="form-control form-control-sm" id="nombreActivo" name="nombreActivo" required>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="marca">Marca</label>
+                                                    <input type="text" class="form-control form-control-sm" id="marca" name="marca">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="modelo">Modelo</label>
+                                                    <input type="text" class="form-control form-control-sm" id="modelo" name="modelo">
+                                                </div>
+                                            </div>
+        
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="color">Color</label>
+                                                    <input type="text" class="form-control form-control-sm" id="color" name="color">
+                                                </div>
+                                                <!--Informacion Equipo-->
+                                                <div class="form-group col-md-6">
+                                                    <label for="capacidadMemoria">Memoria</label>
+                                                    <input type="text" class="form-control form-control-sm" id="capacidadMemoria" name="capacidadMemoria">
+                                                </div>
+                                            </div>
+
+                                            <!--Informacion Equipo-->
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <label for="procesador">Procesador</label>
+                                                    <input type="text" class="form-control form-control-sm" id="procesador" name="procesador">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="discoDuro">Disco Duro</label>
+                                                    <input type="text" class="form-control form-control-sm" id="discoDuro" name="discoDuro">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="pulgadas">Pulgadas</label>
+                                                    <input type="text" class="form-control form-control-sm" id="pulgadas" name="pulgadas">
+                                                </div>                    
+                                            </div>        
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <label for="resolucion">Resolución</label>
+                                                    <input type="text" class="form-control form-control-sm" id="resolucion" name="resolucion">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="conectividad">Conectividad</label>
+                                                    <input type="text" class="form-control form-control-sm" id="conectividad" name="conectividad">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="tipoEntrada">Tipo de entrada</label>
+                                                    <input type="text" class="form-control form-control-sm" id="tipoEntrada" name="tipoEntrada">
+                                                </div>
+
+                                            </div>
+                                        </div> 
+
+                                        <div class="col-md-4 ">
+                                            <!--Imagen del activo-->
+                                            <div class="form-row">
+                                                <div class="form-group col-12">
+                                                    <label for="archivoImagen">Imagen</label>
+                                                    <div class="previewImagen">
+                                                        <span class="delPhoto notBlock"><i class="fas fa-times"></i></span>
+                                                        <label for="archivoImagen"></label>
+                                                        <div>
+                                                            <div class="image-activo">
+                                                                <img src="" alt="" id="img" class="oculto">
+                                                            </div>
+                                                            <div class="content" id="portada">
+                                                                <div class="icon"><i class="fas fa-camera"></i></div>
+                                                                <div class="text">Subir imagen</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="upimg">
+                                                        <input type="file" name="archivoImagen" id="archivoImagen">
+                                                    </div>
+                                                    <div id="form_alert"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="descripcionActivo">Descripción del Activo</label>
+                                                    <textarea class="form-control form-control-sm" id="descripcionActivo" rows="3"></textarea>
+                                                </div>     
+                                            </div>  
+                                            <!--QR-->
+                                            <div class="form-row oculto">
+                                                        <div class="form-group ">
+                                                            <!--<input id="archivoCodigoQR" type="file" class="form-control-file"  name="archivoCodigoQR" >-->
+                                                            <div class="content-codigo-qr">
+                                                            </div>
+                                                        </div>
+                                                        <!--Auxiliar oculto para guadar QR base64-->
+                                                        <textarea class="form-control" id="archivoQR" name="archivoQR" rows="1"></textarea>
+                                            </div>
+                                            <!--QR imagen jpg--> 
+                                            <div class="form-row oculto">
+                                                        <div class="form-group">
+                                                            <div class="content-codigo-qr-img">
+                                                                <!---Desplegar imagen de QR-->
+                                                            </div>
+                                                        </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <div class="row">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Accesorio 1
+                                            </div>
+                                            <div class="card-body tamaño-tarjeta">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12 ">
+                                                        <label for="" >Serial del Dispositivo</label>
+                                                        <input type="text" class="form-control form-control-sm c" id="" name="" required>
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="">Serial TecNM</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Nombre</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Marca</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Modelo</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Color</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="upimg">
-                                                <input type="file" name="archivoImagen" id="archivoImagen">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Accesorio 2
                                             </div>
-                                            <div id="form_alert"></div>
-                                        </div>
-                                    </div>
-
-                                    <!--Informacion general-->
-                                    <div class="form-row">
-                                        <div class="form-group col-md-12">
-                                            <label for="tipoActivo">Tipo de activo</label>
-                                            <input class="form-control" id="tipoActivo" type="text" value="Equipo" readonly>
-                                        </div>
-                                    </div>
-                                    <!---->
-                                    <div class="form-row">
-                                        <div class="form-group col-md-12">
-                                            <label for="estatus">Estatus</label>
-                                            <select class="form-control" id="estatus" name="estatus">
-                                                <?php // TODO ESTA LINEA DE CODIGO SOLO ES PARA TRAER LOS DATOS DE MIS TABLAS CON LA LLAVE FORANEA
-                                                    $get_estatus= "SELECT * FROM estatus";
-                                                    $consulta = $db -> Db_query($get_estatus);
-                                                    while($fila=$consulta->fetch_array()){ //recorre el arreglo
-                                                        echo "<option value ='".$fila['id_estatus']."'>".$fila['nombre_estatus']."</option>"; //muestra los datos de la tabla externa
-                                                    }
-                                                ?>
-                                                <option value="">No especificado</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!---->
-                                    <div class="form-row">
-                                        <!--Informacion de ubicacion-->
-                                        <div class="form-group col-md-12">
-                                            <label for="tipoUbicacion">Ubicación</label> <!--Tipo/Nobre ubicacion-->
-                                            <select class="form-control" id="tipoUbicacion" name="tipoUbicacion" >
-                                            <?php // TODO ESTA LINEA DE CODIGO SOLO ES PARA TRAER LOS DATOS DE MIS TABLAS CON LA LLAVE FORANEA
-                                                $get_ubicaciones = "SELECT * FROM ubicaciones";
-                                                $consulta = $db -> Db_query($get_ubicaciones);
-                                                while($fila=$consulta->fetch_array()){ //recorre el arreglo
-                                                    echo "<option value ='".$fila['id_ubicacion']."'>".$fila['tipo_ubicacion']." ".$fila['nombre_ubicacion']."</option>"; //muestra los datos de la tabla externa
-                                                }
-                                            ?>
-                                            <option value="">No especificado</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    
-
-                                    
-
-                                    <!--QR-->
-                                    <div class="form-row ">
-                                        <div class="form-group ">
-                                            <!--<input id="archivoCodigoQR" type="file" class="form-control-file"  name="archivoCodigoQR" >-->
-                                            <div class="content-codigo-qr">
-                                            </div>
-                                        </div>
-                                        <!--Auxiliar oculto para guadar QR base64-->
-                                        <textarea class="form-control" id="archivoQR" name="archivoQR" rows="1"></textarea>
-                                    </div>
-
-                                    <!--QR imagen jpg--> 
-                                    <div class="form-row ">
-                                        <div class="form-group">
-                                            <div class="content-codigo-qr-img">
-                                                <!---Desplegar imagen de QR-->
+                                            <div class="card-body tamaño-tarjeta">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12 ">
+                                                        <label for="" >Serial del Dispositivo</label>
+                                                        <input type="text" class="form-control form-control-sm c" id="" name="" required>
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="">Serial TecNM</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Nombre</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Marca</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Modelo</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Color</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="row">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Accesorio 3
+                                            </div>
+                                            <div class="card-body tamaño-tarjeta">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12 ">
+                                                        <label for="" >Serial del Dispositivo</label>
+                                                        <input type="text" class="form-control form-control-sm c" id="" name="" required>
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="">Serial TecNM</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Nombre</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Marca</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Modelo</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="">Color</label>
+                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             
+                            <!--Boton-->
                             <div class="form-row center">
                                 <button type="submit" class="btn btn-lg registro-btn" href="validarRegistroEquipo.php" >Registrar Activo</button>
                             </div>
                         </form>
-
                         <!--Codigo QR del activo (tamaño de la imagen)-->
                         <div class="row">
-                            <div class="col-12">
-                                <div class="form-row">
-                                    <!--Elegir tamaño de QR-->
-                                    <div class="form-group oculto" >
-                                        <div class="container">
-                                            <form method="post" id="generador" action="">
-                                                <div class="form-group">
-                                                    <label for="textqr">Tamaño</label>
-                                                    <select class='form-control' id='sizeqr'>
-                                                        <option value='100'>100 px</option>
-                                                        <option value='200'>200 px</option>
-                                                        <option value='300' selected>300 px</option>
-                                                        <option value='400'>400 px</option>
-                                                        <option value='500'>500 px</option>
-                                                    </select>
+                                    <div class="col-12">
+                                        <div class="form-row">
+                                            <!--Elegir tamaño de QR-->
+                                            <div class="form-group oculto" >
+                                                <div class="container">
+                                                    <form method="post" id="generador" action="">
+                                                        <div class="form-group">
+                                                            <label for="textqr">Tamaño</label>
+                                                            <select class='form-control' id='sizeqr'>
+                                                                <option value='100'>100 px</option>
+                                                                <option value='200'>200 px</option>
+                                                                <option value='300' selected>300 px</option>
+                                                                <option value='400'>400 px</option>
+                                                                <option value='500'>500 px</option>
+                                                            </select>
+                                                        </div>
+                                                    </form>
                                                 </div>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-<!--
-                        <button type="button" id="btnDownload" class="btn btn btn-primary" href="" >Descargar</button>
-                                            -->
+                        </div>                        
+                        <!--   <button type="button" id="btnDownload" class="btn btn btn-primary" href="" >Descargar</button>
+                                    -->
                     </div>
                 </div>
             </div>
