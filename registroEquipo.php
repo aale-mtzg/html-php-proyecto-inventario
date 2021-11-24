@@ -49,16 +49,15 @@
             
             <!--Contenido principal-->
             <div id="content" class="container tarjeta"> 
-                <div class="container">
-                    <!---->
-                    <h1>Registro de Equipo</h1>
-                    <div class="container-form ">
+                <!---->
+                <h1>Registro de Equipo</h1>
+                <div class="container-form">
                         <form action="validarRegistroEquipo.php" method="POST"></form>
                             <!--Informacion general-->
                             <div class="row">
                                 <div class="col-md-8 ">
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 tamaño-tarjeta">
                                             <!--Informacion general-->
                                             <div class="form-row">
                                                     <div class="form-group col-md-6">
@@ -178,7 +177,7 @@
                                             </div>
                                         </div> 
 
-                                        <div class="col-md-4 ">
+                                        <div class="col-md-4 tamaño-tarjeta">
                                             <!--Imagen del activo-->
                                             <div class="form-row">
                                                 <div class="form-group col-12">
@@ -232,118 +231,134 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 ">
+
+                                    
                                     <div class="row">
                                         <div class="card">
                                             <div class="card-header">
-                                                Accesorio 1
+                                                Accesorios
                                             </div>
                                             <div class="card-body tamaño-tarjeta">
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-12 ">
-                                                        <label for="" >Serial del Dispositivo</label>
-                                                        <input type="text" class="form-control form-control-sm c" id="" name="" required>
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Monitor</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Teclado</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Mouse</a>
+                                                        </li>
+                                                        </ul>
+                                                        
                                                     </div>
-                                                    <div class="form-group col-md-12">
-                                                        <label for="">Serial TecNM</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Nombre</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Marca</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Modelo</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Color</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Accesorio 2
-                                            </div>
-                                            <div class="card-body tamaño-tarjeta">
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-12 ">
-                                                        <label for="" >Serial del Dispositivo</label>
-                                                        <input type="text" class="form-control form-control-sm c" id="" name="" required>
-                                                    </div>
-                                                    <div class="form-group col-md-12">
-                                                        <label for="">Serial TecNM</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Nombre</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Marca</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Modelo</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Color</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Accesorio 3
-                                            </div>
-                                            <div class="card-body tamaño-tarjeta">
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-12 ">
-                                                        <label for="" >Serial del Dispositivo</label>
-                                                        <input type="text" class="form-control form-control-sm c" id="" name="" required>
-                                                    </div>
-                                                    <div class="form-group col-md-12">
-                                                        <label for="">Serial TecNM</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Nombre</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Marca</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Modelo</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="">Color</label>
-                                                        <input type="text" class="form-control form-control-sm" id="" name="">
+                                                    <div class="row">
+                                                        <div class="tab-content" id="myTabContent">
+                                                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                                <div class="col-12">
+                                                                    <div class="form-row">
+                                                                        <div class="form-group  col-12">
+                                                                            <label for="" >Serial del Dispositivo</label>
+                                                                            <input type="text" class="form-control form-control-sm c" id="" name="" required>
+                                                                        </div>
+                                                                        <div class="form-group col-12">
+                                                                            <label for="">Serial TecNM</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Nombre</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Marca</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Modelo</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Color</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                                                <div class="col-12">
+                                                                    <div class="form-row">
+                                                                        <div class="form-group  col-12">
+                                                                            <label for="" >Serial del Dispositivo</label>
+                                                                            <input type="text" class="form-control form-control-sm c" id="" name="" required>
+                                                                        </div>
+                                                                        <div class="form-group col-12">
+                                                                            <label for="">Serial TecNM</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Nombre</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Marca</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Modelo</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Color</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                                                <div class="col-12">
+                                                                    <div class="form-row">
+                                                                        <div class="form-group  col-12">
+                                                                            <label for="" >Serial del Dispositivo</label>
+                                                                            <input type="text" class="form-control form-control-sm c" id="" name="" required>
+                                                                        </div>
+                                                                        <div class="form-group col-12">
+                                                                            <label for="">Serial TecNM</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Nombre</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Marca</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-row">
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Modelo</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                        <div class="form-group col-6">
+                                                                            <label for="">Color</label>
+                                                                            <input type="text" class="form-control form-control-sm" id="" name="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -383,8 +398,8 @@
                         </div>                        
                         <!--   <button type="button" id="btnDownload" class="btn btn btn-primary" href="" >Descargar</button>
                                     -->
-                    </div>
                 </div>
+                
             </div>
         </div>
             

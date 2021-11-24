@@ -17,7 +17,6 @@
 
 .tamaño-tarjeta{
   font-size: 13px;
-
 }
 
 .tamaño-tarjeta input{
@@ -31,10 +30,13 @@ h1{
   margin-bottom: 30px;
 }
 
+
+
 .container-form{
   font-size: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
+  /*-left: 30px;
+  padding-right: 30px;*/
+  
 }
 
 .container-form input {
